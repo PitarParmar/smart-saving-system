@@ -58,7 +58,7 @@ export default function Login({ type }) {
     }
 
     await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: "https://smart-saving-system.vercel.app//reset-password",
+      redirectTo: "https://smart-saving-system.vercel.app/reset-password",
     });
 
     alert("Reset link sent");
