@@ -1,0 +1,194 @@
+/* 🔤 FONT */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+/* 🌌 BASE */
+.app-bg {
+  position: relative;
+  min-height: 100vh;
+  background: #0b1220;
+  color: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🌈 BACKGROUND */
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, #1e3a8a, transparent 40%),
+    radial-gradient(circle at 80% 70%, #7c3aed, transparent 40%),
+    radial-gradient(circle at 50% 50%, #0ea5e9, transparent 60%);
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  z-index: 0;
+}
+
+/* 📦 CONTAINER */
+.dashboard {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 🧾 TITLE */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* 📊 CARDS */
+.cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🧊 GLASS */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+}
+
+/* 💎 HIGHLIGHT */
+.highlight {
+  background: rgba(37, 99, 235, 0.25);
+}
+
+/* 🔘 BUTTONS */
+.btn-primary,
+.btn-danger {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  margin-top: 12px;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220,38,38,0.4);
+}
+
+/* 📂 SECTIONS */
+.section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 📄 ROWS (🔥 FIXED TABLE STYLE) */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  align-items: center;
+  font-size: 14px;
+}
+
+/* prevent overflow */
+.row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ✏️ INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.07);
+  color: white;
+}
+
+/* 🎯 STATUS */
+.status.pending { color: #f59e0b; }
+.status.approved { color: #22c55e; }
+.status.rejected { color: #ef4444; }
+
+/* ================================= */
+/* 🔥 RESPONSIVENESS */
+/* ================================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-danger {
+    width: 100%;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr 1fr; /* keep horizontal */
+    font-size: 13px;
+  }
+}
+
+/* Mobile small */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  .row {
+    font-size: 12px;
+  }
+}
